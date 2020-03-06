@@ -15,4 +15,3 @@ s:mov ax,10
   int 21h
 code ends
 end s
-

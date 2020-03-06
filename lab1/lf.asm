@@ -1,0 +1,28 @@
+DOSSEG
+.MODEL SMALL
+.STACK 200H
+.DATA
+Y       DB ?
+X       DB 7,6,4
+DATA1   DD LA1,LA2
+DATA2   DW LA1,LA2,DATA1
+
+.CODE
+
+LA0: MOV AX,@DATA
+     MOV DS,AX
+LA1: MOV AL,5
+     ADD AL,X
+LA2: CALL LB
+LOUT: MOV DL,Y
+      OR  DL,30H
+      MOV AH,2
+      INT 21H
+      MOV AH,4CH
+      INT 21H
+LB    PROC
+LB0:  SUB AL,6
+      MOV Y,AL
+LB    RET
+LB    ENDP
+      END LA0
