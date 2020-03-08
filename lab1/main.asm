@@ -76,10 +76,10 @@ for2:
 end:    sub  $a0,$t9,$t6      # end time - start time
         li   $v0,1
         syscall
-        li   $a0,0x0000006d
+        li   $a0,0x0000006d   # print 'm'
         li   $v0,11
         syscall
-        li   $a0,0x00000073
+        li   $a0,0x00000073   # print 's'
         li   $v0,11
         syscall
     
