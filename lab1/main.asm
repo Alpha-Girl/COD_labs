@@ -1,3 +1,8 @@
+# BubbleSort
+.data 
+        
+.text
+.globl main
 main:
         li $v0,5
         syscall              # get n
@@ -55,11 +60,10 @@ exit0:
         move $t9,$a0        # $t9 <- $a0    
         move $t8,$a1        # $t8 <- $a1
         li   $a0,0x10010000
-        addi $s0,$s0,-1     # i = n - 1
         move $t2,$a0        # $t2 = v        
 for2:   
-        slt  $t0,$s0,$zero    # if(0 < i) $t0 = 1 else $t0 = 0
-        beq  $t0,$zero,last   # if(0 = i) jump to end
+        slt  $t0,$zero,$s0    # if(0 < i) $t0 = 1 else $t0 = 0
+        beq  $t0,$zero,end    # if(0 = i) jump to end
         li   $v0,1            # print v[n-i-1]
         lw   $a0,0($t2)
         syscall
@@ -69,6 +73,13 @@ for2:
         addi $t2,$t2,4        # v += 4
         addi $s0,$s0,-1       # i--
         j    for2
-end:    
-
+end:    sub  $a0,$t9,$t6      # end time - start time
+        li   $v0,1
+        syscall
+        li   $a0,0x0000006d
+        li   $v0,11
+        syscall
+        li   $a0,0x00000073
+        li   $v0,11
+        syscall
     
