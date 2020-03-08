@@ -15,6 +15,10 @@ for1:
     addi $s3,$s3,4
     j    for1
 sort:   
+        li   $v0,30
+        syscall
+        move $t6,$a0
+        move $t5,$a1
         li   $a0,0x10010000
         move $a1,$t7     #  $a1=n
         move $s2,$a0     #  $a0=v
@@ -46,6 +50,11 @@ exit1:
 
 exit0:  
         move $s0,$t7        # i=n
+        li   $v0,30
+        syscall 
+        move $t9,$a0
+        move $t8,$a1
+        li   $a0,0x10010000
         addi $s0,$s0,-1
         move $t2,$a0        # $t2 =v        
 for2:   
