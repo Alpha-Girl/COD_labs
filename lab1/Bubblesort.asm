@@ -1,16 +1,15 @@
-
 # BubbleSort.asm  
 .data   
           
 .text  
 .globl main  
 main:  
-        li $v0,5             # ÏµÍ³µ÷ÓÃµÃµ½n
+        li $v0,5             # ç³»ç»Ÿè°ƒç”¨å¾—åˆ°n
         syscall              # get n  
         move $t7,$v0         # $t7 = n  
         move $s0,$zero       # i = 0  
         move $s2,$zero     
-        li   $s3,0x10010000  # Êı×év[]µÄµØÖ·
+        li   $s3,0x10010000  # æ•°ç»„v[]çš„åœ°å€
 		                     # for(i=0;i<n;i++) scanf("%d",&v[i])
 for1:                        # get v[0 ... n-1]  
         slt  $s1,$s0,$t7     # if(i < n) $s1 = 1 else $s1 = 0  
@@ -22,7 +21,7 @@ for1:                        # get v[0 ... n-1]
         addi $s3,$s3,4       # $s3 = $s3 + 4  
         j    for1  
 sort:     
-        li   $v0,30          # ÏµÍ³µ÷ÓÃ»ñµÃÅÅĞò¿ªÊ¼Ê±µÄÊ±¼ä
+        li   $v0,30          # ç³»ç»Ÿè°ƒç”¨è·å¾—æ’åºå¼€å§‹æ—¶çš„æ—¶é—´
         syscall              # get start time $a1,$a0  
         move $t6,$a0         # $t6 <- $a0  
         move $t5,$a1         # $t5 <- $a1  
@@ -56,7 +55,7 @@ exit2:
 exit1:  
         addi $s0,$s0,-1      # i--  
         j    forlist1  
-                             # ÏµÍ³µ÷ÓÃ»ñµÃÅÅĞò½áÊøÊ±µÄÊ±¼ä
+                             # ç³»ç»Ÿè°ƒç”¨è·å¾—æ’åºç»“æŸæ—¶çš„æ—¶é—´
 exit0:    
         move $s0,$t7         # i=n  
         li   $v0,30          # get end time $a1,$a0  
@@ -85,4 +84,4 @@ end:    sub  $a0,$t9,$t6     # end time - start time
         syscall  
         li   $a0,0x00000073  # print 's'  
         li   $v0,11  
-        syscall  
+        syscall
