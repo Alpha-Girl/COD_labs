@@ -10,7 +10,10 @@ begin
         2'b01: begin s = 0; y = a | b; end
         2'b10: begin {s,y} = a + b; end
         2'b11: begin
-            //请将代码补充完整
+            if(b[2])
+                y = a << b[1:0];
+            else
+                y = a >> b[1:0];
         end
         default: begin s = 0; y = 0; end
     endcase
