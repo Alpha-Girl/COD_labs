@@ -1,0 +1,7 @@
+{
+    "verilog-format.path": "D:\\iStyle\\verilog-format-master\\bin\\verilog-format-WIN\\verilog-format.exe",
+    "verilog-format.setting": "D:\\iStyle\\verilog-format-master\\bin\\verilog-format-WIN\\.verilog-format.properties",
+    "verilog-formatter.istyle.path": "C:\\Users\\Asus\\Downloads\\iStyle_windows_x86_64\\iStyle",
+    "verilog-formatter.istyle.style": "ANSI",
+    "verilog-formatter.istyle.args": "-s4 -P "
+}
