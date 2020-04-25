@@ -30,7 +30,7 @@ endmodule
 
 module mux4 #( parameter WIDTH = 32 )    //数据宽度
   ( output [ WIDTH - 1: 0 ] y,    //输出数据
-    input [ WIDTH - 1: 0 ] a, b, c, d //两路输入数据
+    input [ WIDTH - 1: 0 ] a, b, c, d ,//两路输入数据
     input [ 1: 0 ] sel //数据选择控制
   );
 wire [ WIDTH - 1: 0 ] result0, result1;

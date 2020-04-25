@@ -20,21 +20,21 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module alu #( parameter WIDTH = 32 )     //数据宽度
-       ( output [ WIDTH - 1: 0 ] y,      //运算结果
-         output zf,                //零标志
-         output cf,                //进位/错位标志
-         output of,                //溢出标志
+       ( output reg [ WIDTH - 1: 0 ] y,      //运算结果
+         output reg zf,                //零标�?
+         output reg cf,                //进位/错位标志
+         output reg of,                //溢出标志
          input [ WIDTH - 1: 0 ] a,
          b,                        //两操作数
          input [ 2: 0 ] m );
-parameter ADD = 3'b000;
-parameter SUB = 3'b001;
-parameter AND = 3'b010;
-parameter OR = 3'b011;
-parameter XOR = 3'b100;
+localparam ADD = 3'b000;
+localparam SUB = 3'b001;
+localparam AND = 3'b010;
+localparam OR = 3'b011;
+localparam XOR = 3'b100;
 always @( * )
   begin
-    zf = ~|y;
+    
     case ( m )
       ADD:
         begin
@@ -65,5 +65,6 @@ always @( * )
           of = 0;
         end
     endcase
+    zf = ~|y;
   end
 endmodule
