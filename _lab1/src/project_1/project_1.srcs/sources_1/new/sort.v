@@ -21,7 +21,7 @@
 
 
 module sort #( parameter N = 4 )    //data width
-       ( output reg [ N - 1: 0 ] s0, s1, s2, s3,  //output data (incrementally)
+       ( output reg [ N - 1: 0 ] s0, s1, s2, s3,  //output data (incremental)
          output reg done,    //finish flag
          input [ N - 1: 0 ] x0, x1, x2, x3,    //input data
          input clk, rst //clock,reset
@@ -56,13 +56,9 @@ mux4 compare_b( b, r0, r1, r2, r3, selb );
 //Control Unit
 always @( posedge clk, posedge rst )
   if ( rst )
-    begin
       current_state <= LOAD;
-    end
   else
-    begin
       current_state <= next_state ;
-    end
 always@( * )
   begin
     case ( current_state )
@@ -96,35 +92,14 @@ always@( * )
           { sel0, sel1, sel2, sel3 } = 8'b00011011;
           { en0, en1, en2, en3 } = 4'b1111;
         end
-      CX01F:
+      CX01F,CX01S,CX01T:
         begin
           { sela, selb } = 4'b0001;
           { sel0, sel1 } = 4'b0100;
           en0 = ~cf;
           en1 = ~cf;
         end
-      CX01S:
-        begin
-          { sela, selb } = 4'b0001;
-          { sel0, sel1 } = 4'b0100;
-          en0 = ~cf;
-          en1 = ~cf;
-        end
-      CX01T:
-        begin
-          { sela, selb } = 4'b0001;
-          { sel0, sel1 } = 4'b0100;
-          en0 = ~cf;
-          en1 = ~cf;
-        end
-      CX12F:
-        begin
-          { sela, selb } = 4'b0110;
-          { sel1, sel2 } = 4'b1001;
-          en1 = ~cf;
-          en2 = ~cf;
-        end
-      CX12S:
+      CX12F,CX12S:
         begin
           { sela, selb } = 4'b0110;
           { sel1, sel2 } = 4'b1001;
