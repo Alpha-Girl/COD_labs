@@ -1,31 +1,31 @@
-`timescale 1ns / 1ps 
+`timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company:
-// Engineer:
-//
-// Create Date: 2020/04/23 22:09:47
-// Design Name:
-// Module Name: sort
-// Project Name:
-// Target Devices:
-// Tool Versions:
-// Description:
-//
-// Dependencies:
-//
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2020/04/26 21:00:56
+// Design Name: 
+// Module Name: sort_new
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
-//
+// 
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module sort #( parameter N = 4 )     //data width
-       ( output reg [ N - 1: 0 ] s0, s1, s2, s3,   //output data (incremental)
-         output reg done,     //finish flag
-         input [ N - 1: 0 ] x0, x1, x2, x3,     //input data
-         input clk, rst //clock,reset
-
+module sort_new #( parameter N = 4 )    //data width
+       ( output reg [ N - 1: 0 ] s0, s1, s2, s3,  //output data (incrementally)
+         output reg done,    //finish flag
+         input [ N - 1: 0 ] x0, x1, x2, x3,    //input data
+         input clk, rst, //clock,reset
+         input opr //1(descending) 0(incremental)
        );
 //FSM State define
 localparam LOAD = 3'd0; //load data
@@ -96,26 +96,26 @@ always@( * )
           { sel0, sel1, sel2, sel3 } = 8'b00011011;
           { en0, en1, en2, en3 } = 4'b1111;
         end
-      CX01F, CX01S, CX01T:
+      CX01F,CX01S,CX01T:
         begin
           { sela, selb } = 4'b0001;
           { sel0, sel1 } = 4'b0100;
-          en0 = ~cf;
-          en1 = ~cf;
+          en0 = opr^~cf;
+          en1 = opr^~cf;
         end
-      CX12F, CX12S:
+      CX12F,CX12S:
         begin
           { sela, selb } = 4'b0110;
           { sel1, sel2 } = 4'b1001;
-          en1 = ~cf;
-          en2 = ~cf;
+          en1 = opr^~cf;
+          en2 = opr^~cf;
         end
       CX23F:
         begin
           { sela, selb } = 4'b1011;
           { sel2, sel3 } = 4'b1110;
-          en2 = ~cf;
-          en3 = ~cf;
+          en2 = opr^~cf;
+          en3 = opr^~cf;
         end
       HLT:
         done = 1;
@@ -129,5 +129,3 @@ always@( * )
     s3 = r3;
   end
 endmodule
-
-

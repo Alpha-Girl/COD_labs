@@ -21,8 +21,8 @@
 
 module register #( parameter WIDTH = 32, RST_VALUE = 0 )
        (
-         input clk, rst, en,   //clock,reset,enable
-         input [ WIDTH - 1: 0 ] d,   //input data
+         input clk, rst, en,  //clock,reset,enable
+         input [ WIDTH - 1: 0 ] d,  //input data
          output reg [ WIDTH - 1: 0 ] q //output data
        );
 always @( posedge clk, posedge rst )

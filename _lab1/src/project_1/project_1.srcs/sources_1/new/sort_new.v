@@ -1,30 +1,30 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ps 
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
+// Company:
+// Engineer:
+//
 // Create Date: 2020/04/26 21:00:56
-// Design Name: 
+// Design Name:
 // Module Name: sort_new
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
+// Project Name:
+// Target Devices:
+// Tool Versions:
+// Description:
+//
+// Dependencies:
+//
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
-// 
+//
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module sort_new #( parameter N = 4 )    //data width
-       ( output reg [ N - 1: 0 ] s0, s1, s2, s3,  //output data (incrementally)
-         output reg done,    //finish flag
-         input [ N - 1: 0 ] x0, x1, x2, x3,    //input data
-         input clk, rst, //clock,reset
+module sort_new #( parameter N = 4 )     //data width
+       ( output reg [ N - 1: 0 ] s0, s1, s2, s3,   //output data (incrementally)
+         output reg done,     //finish flag
+         input [ N - 1: 0 ] x0, x1, x2, x3,     //input data
+         input clk, rst,  //clock,reset
          input opr //1(descending) 0(incremental)
        );
 //FSM State define
@@ -96,14 +96,14 @@ always@( * )
           { sel0, sel1, sel2, sel3 } = 8'b00011011;
           { en0, en1, en2, en3 } = 4'b1111;
         end
-      CX01F,CX01S,CX01T:
+      CX01F, CX01S, CX01T:
         begin
           { sela, selb } = 4'b0001;
           { sel0, sel1 } = 4'b0100;
           en0 = opr^~cf;
           en1 = opr^~cf;
         end
-      CX12F,CX12S:
+      CX12F, CX12S:
         begin
           { sela, selb } = 4'b0110;
           { sel1, sel2 } = 4'b1001;
