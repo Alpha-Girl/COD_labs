@@ -19,13 +19,13 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
-module alu #( parameter WIDTH = 32 )     //数据宽度
-       ( output reg [ WIDTH - 1: 0 ] y,      //运算结果
-         output reg zf,                //零标�?
-         output reg cf,                //进位/错位标志
-         output reg of,                //溢出标志
+module alu #( parameter WIDTH = 32 )      //data width
+       ( output reg [ WIDTH - 1: 0 ] y,       //output data
+         output reg zf,                 //zero flag
+         output reg cf,                 //carry flag
+         output reg of,                 //overflow flag
          input [ WIDTH - 1: 0 ] a,
-         b,                        //两操作数
+         b,                         //input data
          input [ 2: 0 ] m );
 localparam ADD = 3'b000;
 localparam SUB = 3'b001;
@@ -34,7 +34,6 @@ localparam OR = 3'b011;
 localparam XOR = 3'b100;
 always @( * )
   begin
-    
     case ( m )
       ADD:
         begin

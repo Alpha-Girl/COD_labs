@@ -21,9 +21,9 @@
 
 module register #( parameter WIDTH = 32, RST_VALUE = 0 )
        (
-         input clk, rst, en, //时钟，复位，使能
-         input [ WIDTH - 1: 0 ] d, //输入数据
-         output reg [ WIDTH - 1: 0 ] q //输出数据
+         input clk, rst, en,  //clock,reset,enable
+         input [ WIDTH - 1: 0 ] d,  //input data
+         output reg [ WIDTH - 1: 0 ] q //output data
        );
 always @( posedge clk, posedge rst )
   begin

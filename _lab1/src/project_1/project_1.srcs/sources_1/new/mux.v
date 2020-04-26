@@ -19,19 +19,19 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
-module mux2 #( parameter WIDTH = 32 )    //数据宽度
-       ( output [ WIDTH - 1: 0 ] y,    //输出数据
-         input [ WIDTH - 1: 0 ] a, b,    //两路输入数据
-         input s //数据选择控制
+module mux2 #( parameter WIDTH = 32 )     //data width
+       ( output [ WIDTH - 1: 0 ] y,     //output data
+         input [ WIDTH - 1: 0 ] a, b,     //input data
+         input s //select
        );
 assign y = s ? b : a;
 endmodule
 
 
-module mux4 #( parameter WIDTH = 32 )    //数据宽度
-  ( output [ WIDTH - 1: 0 ] y,    //输出数据
-    input [ WIDTH - 1: 0 ] a, b, c, d ,//两路输入数据
-    input [ 1: 0 ] sel //数据选择控制
+  module mux4 #( parameter WIDTH = 32 )     //data width
+  ( output [ WIDTH - 1: 0 ] y,     //output data
+    input [ WIDTH - 1: 0 ] a, b, c, d , //input data
+    input [ 1: 0 ] sel //select
   );
 wire [ WIDTH - 1: 0 ] result0, result1;
 mux2 mux2_1( .y( result0 ), .a( a ), .b( b ), .s( sel[ 0 ] ) );
