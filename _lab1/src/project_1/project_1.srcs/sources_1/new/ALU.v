@@ -46,17 +46,11 @@ always @( * )
           of = ( ~a[ WIDTH - 1 ] & b[ WIDTH - 1 ] & y[ WIDTH - 1 ] ) | ( a[ WIDTH - 1 ] & ~b[ WIDTH - 1 ] & ~y[ WIDTH - 1 ] );
         end
       AND:
-        begin
-          y = a & b;
-        end
+        y = a & b;
       OR:
-        begin
-          y = a | b;
-        end
+        y = a | b;
       XOR:
-        begin
-          y = a ^ b;
-        end
+        y = a ^ b;
       default:
         begin
           y = 0;
