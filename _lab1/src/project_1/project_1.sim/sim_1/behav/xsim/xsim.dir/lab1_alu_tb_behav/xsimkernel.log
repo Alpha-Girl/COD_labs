@@ -2,3 +2,6 @@ Running: xsim.dir/lab1_alu_tb_behav/xsimk.exe -simmode gui -wdb lab1_alu_tb_beha
 Design successfully loaded
 Design Loading Memory Usage: 7672 KB (Peak: 7672 KB)
 Design Loading CPU Usage: 234 ms
+Simulation completed
+Simulation Memory Usage: 8312 KB (Peak: 8312 KB)
+Simulation CPU Usage: 234 ms

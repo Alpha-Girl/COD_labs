@@ -21,7 +21,7 @@
 
 
 module sort_new #( parameter N = 4 )     //data width
-       ( output reg [ N - 1: 0 ] s0, s1, s2, s3,   //output data (incrementally)
+       ( output reg [ N - 1: 0 ] s0, s1, s2, s3,   //output data 
          output reg done,     //finish flag
          input [ N - 1: 0 ] x0, x1, x2, x3,     //input data
          input clk, rst,  //clock,reset
