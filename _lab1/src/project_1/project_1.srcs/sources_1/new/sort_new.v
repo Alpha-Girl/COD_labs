@@ -20,11 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module sort_new #( parameter N = 4 )     //data width
-       ( output reg [ N - 1: 0 ] s0, s1, s2, s3,   //output data 
-         output reg done,     //finish flag
-         input [ N - 1: 0 ] x0, x1, x2, x3,     //input data
-         input clk, rst,  //clock,reset
+module sort_new #( parameter N = 4 )      //data width
+       ( output reg [ N - 1: 0 ] s0, s1, s2, s3,    //output data
+         output reg done,      //finish flag
+         input [ N - 1: 0 ] x0, x1, x2, x3,      //input data
+         input clk, rst,   //clock,reset
          input opr //1(descending) 0(incremental)
        );
 //FSM State define
@@ -38,6 +38,7 @@ localparam CX01T = 3'd6; //compare 0 1 (Third time)
 localparam HLT = 3'd7; //hlt
 wire [ N - 1: 0 ] r0, r1, r2, r3, i0, i1, i2, i3, a, b, y;
 wire zf, cf, of;
+reg flag;
 reg en0, en1, en2, en3;
 reg [ 1: 0 ] sel0, sel1, sel2, sel3, sela, selb;
 reg [ 2: 0 ] current_state, next_state;
@@ -90,6 +91,7 @@ always@( * )
 always@( * )
   begin
     { en0, en1, en2, en3, done } = 5'b0;
+    flag = a[ N - 1 ] ^ b[ N - 1 ];
     case ( current_state )
       LOAD:
         begin
@@ -100,22 +102,22 @@ always@( * )
         begin
           { sela, selb } = 4'b0001;
           { sel0, sel1 } = 4'b0100;
-          en0 = opr^~cf;
-          en1 = opr^~cf;
+          en0 = opr^~cf ^ flag;
+          en1 = opr^~cf ^ flag;
         end
       CX12F, CX12S:
         begin
           { sela, selb } = 4'b0110;
           { sel1, sel2 } = 4'b1001;
-          en1 = opr^~cf;
-          en2 = opr^~cf;
+          en1 = opr^~cf ^ flag;
+          en2 = opr^~cf ^ flag;
         end
       CX23F:
         begin
           { sela, selb } = 4'b1011;
           { sel2, sel3 } = 4'b1110;
-          en2 = opr^~cf;
-          en3 = opr^~cf;
+          en2 = opr^~cf ^ flag;
+          en3 = opr^~cf ^ flag;
         end
       HLT:
         done = 1;

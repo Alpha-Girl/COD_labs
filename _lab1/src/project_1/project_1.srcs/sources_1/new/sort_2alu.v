@@ -20,11 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module sort_2alu #( parameter N = 4 )     //data width
-       ( output reg [ N - 1: 0 ] s0, s1, s2, s3,   //output data
-         output reg done,     //finish flag
-         input [ N - 1: 0 ] x0, x1, x2, x3,     //input data
-         input clk, rst,  //clock,reset
+module sort_2alu #( parameter N = 4 )      //data width
+       ( output reg [ N - 1: 0 ] s0, s1, s2, s3,    //output data
+         output reg done,      //finish flag
+         input [ N - 1: 0 ] x0, x1, x2, x3,      //input data
+         input clk, rst,   //clock,reset
          input opr //1(descending) 0(incremental)
        );
 //FSM State define
@@ -35,6 +35,7 @@ localparam CX01_23S = 3'd3; //compare 0-1 2-3(Second time)
 localparam HLT = 3'd4; //hlt
 wire [ N - 1: 0 ] r0, r1, r2, r3, i0, i1, i2, i3, a, b, c, d, y0, y1;
 wire zf0, cf0, of0, zf1, cf1, of1;
+reg flag0, flag1;
 reg en0, en1, en2, en3;
 reg [ 1: 0 ] sel0, sel1, sel2, sel3, sela, selb, selc, seld;
 reg [ 2: 0 ] current_state, next_state;
@@ -82,6 +83,8 @@ always@( * )
 always@( * )
   begin
     { en0, en1, en2, en3, done } = 5'b0;
+    flag0 = a[ N - 1 ] ^ b[ N - 1 ];
+    flag1 = c[ N - 1 ] ^ d[ N - 1 ];
     case ( current_state )
       LOAD:
         begin
@@ -92,19 +95,19 @@ always@( * )
         begin
           { sela, selb , selc, seld } = 8'b00011011;
           { sel0, sel1 , sel2, sel3 } = 8'b01001110;
-          en0 = opr^~cf0;
-          en1 = opr^~cf0;
-          en2 = opr^~cf1;
-          en3 = opr^~cf1;
+          en0 = opr^~cf0 ^ flag0;
+          en1 = opr^~cf0 ^ flag0;
+          en2 = opr^~cf1 ^ flag1;
+          en3 = opr^~cf1 ^ flag1;
         end
       CX03_12F:
         begin
           { sela, selb , selc, seld } = 8'b00110110;
           { sel0, sel1 , sel2, sel3 } = 8'b11100100;
-          en0 = opr^~cf0;
-          en1 = opr^~cf1;
-          en2 = opr^~cf1;
-          en3 = opr^~cf0;
+          en0 = opr^~cf0 ^ flag0;
+          en1 = opr^~cf1 ^ flag1;
+          en2 = opr^~cf1 ^ flag1;
+          en3 = opr^~cf0 ^ flag0;
         end
       HLT:
         done = 1;
