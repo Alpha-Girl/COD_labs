@@ -31,7 +31,7 @@ wire done;
 parameter PERIOD = 10,   	//time per cycle
           CYCLE = 20;		//total cycles
 
-sort SORT( s0, s1, s2, s3, done, x0, x1, x2, x3, clk, rst );
+xsort SORT( s0, s1, s2, s3, done, x0, x1, x2, x3, clk, rst );
 
 initial
   begin
