@@ -24,7 +24,7 @@ module register_file//32 x WIDTH register file
     #(parameter WIDTH =32)(//data width
     input clk,//clock
     input [4:0] ra0,//read address 0
-    output [WIDTH-1:0] rd0,//read datd 0
+    output [WIDTH-1:0] rd0,//read data 0
     input [4:0] ra1,//read address 1
     output [WIDTH-1:0] rd1,//read data 1
     input [4:0] wa,//write address
@@ -34,5 +34,13 @@ module register_file//32 x WIDTH register file
 reg [4:0] addr_reg;
 reg [WIDTH-1:0] mem[0:WIDTH-1];
 initial 
-    $read
+    $readmemh("register_file_initial.txt",mem);
+
+assign rd0 = mem[ra0];
+assign rd1 = mem[ra1];
+
+always @(posedge clk) begin 
+    if(we)
+        mem[wa]<=wd;
+end
 endmodule
