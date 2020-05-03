@@ -31,15 +31,17 @@ module register_file//32 x WIDTH register file
     input we,//write enable
     input [WIDTH-2:0] wd//write data
     );
-reg [4:0] addr_reg;
+reg [4:0] addr_reg0,addr_reg1;
 reg [WIDTH-1:0] mem[0:WIDTH-1];
 initial 
     $readmemh("register_file_initial.txt",mem);
 
-assign rd0 = mem[ra0];
-assign rd1 = mem[ra1];
+assign rd0 = mem[addr_reg0];
+assign rd1 = mem[addr_reg1];
 
-always @(posedge clk) begin 
+always @(posedge clk) begin
+    addr_reg0=ra0;
+    addr_reg1=ra1;
     if(we)
         mem[wa]<=wd;
 end
