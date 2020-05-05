@@ -29,12 +29,12 @@ module register_file//32 x WIDTH register file
     output [WIDTH-1:0] rd1,//read data 1
     input [4:0] wa,//write address
     input we,//write enable
-    input [WIDTH-2:0] wd//write data
+    input [WIDTH-1:0] wd//write data
     );
 reg [4:0] addr_reg0,addr_reg1;
 reg [WIDTH-1:0] mem[0:WIDTH-1];
 initial 
-    $readmemh("register_file_initial.txt",mem);
+    $readmemh("C:/Users/Asus/Documents/GitHub/COD_labs/_lab2/src/_lab2/_lab2.srcs/sources_1/new/register_file_initial.txt",mem);
 
 assign rd0 = mem[addr_reg0];
 assign rd1 = mem[addr_reg1];
