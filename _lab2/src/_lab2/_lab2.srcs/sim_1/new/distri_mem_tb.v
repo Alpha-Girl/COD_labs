@@ -1,75 +1,75 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ps 
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
+// Company:
+// Engineer:
+//
 // Create Date: 2020/05/05 22:43:11
-// Design Name: 
+// Design Name:
 // Module Name: distri_mem_tb
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
+// Project Name:
+// Target Devices:
+// Tool Versions:
+// Description:
+//
+// Dependencies:
+//
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
-// 
+//
 //////////////////////////////////////////////////////////////////////////////////
 
 
 module distri_mem_tb(
 
-    );
-reg clk,we;
-reg [3:0] a;
-reg [7:0] d;
-wire [7:0] spo;
+       );
+reg clk, we;
+reg [ 3: 0 ] a;
+reg [ 7: 0 ] d;
+wire [ 7: 0 ] spo;
 dist_mem_gen_0 bb(
-    a,
-    d,
-   clk,
-    we ,
-    spo
-  );
-    parameter PERIOD = 10,   	//time per cycle
+                 a,
+                 d,
+                 clk,
+                 we ,
+                 spo
+               );
+parameter PERIOD = 10,    	//time per cycle
           CYCLE = 20;		//total cycles
-    initial
+initial
   begin
     clk = 0;
     repeat ( 3 * CYCLE )
       #( PERIOD / 2 ) clk = ~clk;
     $finish;
   end
-  initial
+initial
   begin
-    a=4'h0;
-    d=8'hff;
-    we=0;
-    
+    a = 4'h0;
+    d = 8'hff;
+    we = 0;
+
     #PERIOD;
-    a=4'h2;
-    d=8'hf5;
-    we=1;
+    a = 4'h2;
+    d = 8'hf5;
+    we = 1;
     #PERIOD;
-    we=0;
-   a=4'h0;
-    d=8'h5a;
-   
+    we = 0;
+    a = 4'h0;
+    d = 8'h5a;
+
     #PERIOD;
-     a=4'h1;
-    d=8'h00;
-    we=1;
+    a = 4'h1;
+    d = 8'h00;
+    we = 1;
     #PERIOD;
-     a=4'h1;
-    d=8'h11;
-    we=0;
+    a = 4'h1;
+    d = 8'h11;
+    we = 0;
     #PERIOD;
-     a=4'h3;
-    d=8'hcc;
-    we=1;
+    a = 4'h3;
+    d = 8'hcc;
+    we = 1;
     #PERIOD;
     $finish;
   end
