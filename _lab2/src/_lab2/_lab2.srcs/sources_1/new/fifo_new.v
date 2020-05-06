@@ -29,7 +29,6 @@ module fifo_new(
          output reg [ 4: 0 ] count //length of queue
        );
 wire edg_in, edg_out, we;
-
 reg [ 5: 0 ] next_count;
 reg [ 3: 0 ] Q_head, Q_tail, next_Q_head, next_Q_tail;
 reg [ 1: 0 ] state, next_state;
@@ -39,6 +38,7 @@ edg edg1 ( clk, rst, en_in, edg_in );
 edg edg2 ( clk, rst, en_out, edg_out );
 
 assign we = edg_in;
+//state define
 localparam S0 = 2'b00;
 localparam S1 = 2'b01;
 localparam S2 = 2'b10;
@@ -56,6 +56,7 @@ always @( posedge clk, posedge rst )
         state <= next_state;
       end
   end
+//next_state logic
 always @( posedge clk, posedge rst )
   begin
     if ( rst )
@@ -100,7 +101,7 @@ always @( posedge clk, posedge rst )
         count <= next_count;
       end
   end
-
+//next_count logic
 always @( posedge clk, posedge rst )
   begin
     if ( rst )
@@ -126,7 +127,7 @@ always @( posedge clk, posedge rst )
           next_count <= count;
       endcase
   end
-//head
+//head logic
 always @( posedge clk, posedge rst )
   begin
     if ( rst )
@@ -138,6 +139,7 @@ always @( posedge clk, posedge rst )
         Q_head <= next_Q_head;
       end
   end
+//next_head logic
 always @( posedge clk, posedge rst )
   begin
     if ( rst )
@@ -154,7 +156,7 @@ always @( posedge clk, posedge rst )
           next_Q_head <= Q_head;
       endcase
   end
-//tail
+//tail logic
 always @( posedge clk, posedge rst )
   begin
     if ( rst )
@@ -166,6 +168,7 @@ always @( posedge clk, posedge rst )
         Q_tail <= next_Q_tail;
       end
   end
+//next_tail logic
 always @( posedge clk, posedge rst )
   begin
     if ( rst )
@@ -182,5 +185,6 @@ always @( posedge clk, posedge rst )
           next_Q_tail <= Q_tail;
       endcase
   end
+//addr logic
 assign addr = we ? Q_tail : Q_head;
 endmodule

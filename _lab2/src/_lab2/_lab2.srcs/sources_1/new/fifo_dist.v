@@ -30,7 +30,6 @@ module fifo_dist
          output reg [ 4: 0 ] count //length of queue
        );
 wire edg_in, edg_out, we, en;
-
 reg [ 7: 0 ] next_din;
 reg [ 3: 0 ] Q_head, Q_tail;
 wire [ 3: 0 ] addr;

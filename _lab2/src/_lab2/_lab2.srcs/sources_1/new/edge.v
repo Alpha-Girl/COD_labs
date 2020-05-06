@@ -71,5 +71,4 @@ always @ *
         next_state = S0;
     endcase
   end
-
 endmodule
