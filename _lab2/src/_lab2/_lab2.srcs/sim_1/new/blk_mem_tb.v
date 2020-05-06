@@ -27,7 +27,7 @@ reg clka,ena,wea;
 reg [3:0] addra;
 reg [7:0] dina;
 wire [7:0] douta;
-blk_mem_gen_0 aa(
+blk_mem_gen_2 aa(
     clka,
     ena,
     wea,
@@ -53,29 +53,72 @@ blk_mem_gen_0 aa(
     
     #PERIOD;
     ena=1;      		//ADD
+    wea=0;
+    addra=4'h1;
+    dina=8'h11;
+    
+    #PERIOD;
+    ena=1;      		//ADD
+    wea=0;
+    addra=4'h2;
+    dina=8'h11;
+    
+    #PERIOD;
+    ena=1;      		//ADD
     wea=1;
     addra=4'h2;
     dina=8'h12;
     #PERIOD;
      ena=1;      		//ADD
+    wea=0;
+    addra=4'h0;
+    dina=8'h14;
+    #PERIOD;
+     ena=1;      		//ADD
+    wea=1;
+    addra=4'h2;
+    dina=8'hff;
+    #PERIOD;
+     ena=0;      		//ADD
+    wea=0;
+    addra=4'h0;
+    dina=8'h2f;
+    #PERIOD;
+     ena=1;      		//ADD
     wea=1;
     addra=4'h1;
-    dina=8'h14;
+    dina=8'h24;
     #PERIOD;
      ena=1;      		//ADD
     wea=0;
     addra=4'h2;
     dina=8'h24;
     #PERIOD;
-     ena=0;      		//ADD
-    wea=1;
-    addra=4'h0;
-    dina=8'h2f;
-    #PERIOD;
      ena=1;      		//ADD
     wea=0;
     addra=4'h1;
     dina=8'h24;
+    #PERIOD;
+    ena=1;      		//ADD
+    wea=0;
+    addra=4'h0;
+    dina=8'h11;
+    
+    #PERIOD;
+    #PERIOD;
+    ena=0;      		//ADD
+    wea=0;
+    addra=4'h0;
+    dina=8'h11;
+    
+    #PERIOD;
+    #PERIOD;
+    ena=1;      		//ADD
+    wea=0;
+    addra=4'h0;
+    dina=8'h11;
+    
+    #PERIOD;
     $finish;
   end
 endmodule

@@ -1,4 +1,4 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Asus/Documents/GitHub/COD_labs/_lab2/src/_lab2/_lab2.srcs/sources_1/ip/dist_mem_gen_0/sim/dist_mem_gen_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dist_mem_gen_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Asus/Documents/GitHub/COD_labs/_lab2/src/_lab2/_lab2.srcs/sim_1/new/distri_mem_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module distri_mem_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Asus/Documents/GitHub/COD_labs/_lab2/src/_lab2/_lab2.srcs/sources_1/new/register_file.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Asus/Documents/GitHub/COD_labs/_lab2/src/_lab2/_lab2.srcs/sim_1/new/reg_file_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file_tb

@@ -2,11 +2,11 @@
 # Webtalk v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue May  5 22:51:39 2020
-# Process ID: 4488
+# Start of session at: Wed May  6 14:46:02 2020
+# Process ID: 9564
 # Current directory: C:/Users/Asus/Documents/GitHub/COD_labs/_lab2/src/_lab2/_lab2.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/Asus/Documents/GitHub/COD_labs/_lab2/src/_lab2/_lab2.sim/sim_1/behav/xsim/xsim.dir/distri_mem_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source C:/Users/Asus/Documents/GitHub/COD_labs/_lab2/src/_lab2/_lab2.sim/sim_1/behav/xsim/xsim.dir/fifo_new_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/Asus/Documents/GitHub/COD_labs/_lab2/src/_lab2/_lab2.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: C:/Users/Asus/Documents/GitHub/COD_labs/_lab2/src/_lab2/_lab2.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/Asus/Documents/GitHub/COD_labs/_lab2/src/_lab2/_lab2.sim/sim_1/behav/xsim/xsim.dir/distri_mem_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+source C:/Users/Asus/Documents/GitHub/COD_labs/_lab2/src/_lab2/_lab2.sim/sim_1/behav/xsim/xsim.dir/fifo_new_tb_behav/webtalk/xsim_webtalk.tcl -notrace

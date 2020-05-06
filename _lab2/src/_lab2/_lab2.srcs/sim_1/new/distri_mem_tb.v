@@ -54,13 +54,14 @@ dist_mem_gen_0 bb(
     d=8'hf5;
     we=1;
     #PERIOD;
+    we=0;
    a=4'h0;
     d=8'h5a;
-    we=1;
+   
     #PERIOD;
      a=4'h1;
     d=8'h00;
-    we=0;
+    we=1;
     #PERIOD;
      a=4'h1;
     d=8'h11;

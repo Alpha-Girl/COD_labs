@@ -44,7 +44,7 @@ assign wd=wd_r;
     initial
   begin
     clk = 0;
-    repeat ( 3 * CYCLE )
+    repeat ( 30 * CYCLE )
       #( PERIOD / 2 ) clk = ~clk;
     $finish;
   end
@@ -66,6 +66,18 @@ initial
     we=1;
     ra0=5'b1;
     ra1=5'd30;
+    #PERIOD;
+    wa=5'd4;
+    wd_r=32'b1;
+    we=1;
+    ra1=5'd31;
+    ra0=5'd24;
+    #PERIOD;
+    wa=5'b1;
+    wd_r=32'hffff;
+    we=1;
+    ra0=5'd11;
+    ra1=5'd13;
     #PERIOD;
     $finish;
   end

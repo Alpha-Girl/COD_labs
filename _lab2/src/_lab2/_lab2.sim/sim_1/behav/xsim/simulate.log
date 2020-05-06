@@ -1,4 +1,3 @@
 Vivado Simulator 2019.1
 Time resolution is 1 ps
-WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
-$finish called at time : 60 ns : File "C:/Users/Asus/Documents/GitHub/COD_labs/_lab2/src/_lab2/_lab2.srcs/sim_1/new/distri_mem_tb.v" Line 73
+$finish called at time : 50 ns : File "C:/Users/Asus/Documents/GitHub/COD_labs/_lab2/src/_lab2/_lab2.srcs/sim_1/new/reg_file_tb.v" Line 82

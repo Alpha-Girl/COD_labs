@@ -1,2 +1,2 @@
 memory_initialization_radix=16;
-memory_initialization_vector=5A,5A,A5,A5,00,00,11,11;
+memory_initialization_vector=5A 5A A5 A5 00 00 11 11 5A 5A A5 A5 00 00 11 11;
