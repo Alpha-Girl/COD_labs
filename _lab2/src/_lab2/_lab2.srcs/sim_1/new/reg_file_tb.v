@@ -60,6 +60,11 @@ initial
     wd_r = 32'b1;
     we = 1;
     ra1 = 5'd31;
+    #(PERIOD/2);
+    ra0=5'd4;
+    ra1=5'd16;
+    #(PERIOD/2);
+    
     #PERIOD;
     wa = 5'b1;
     wd_r = 32'ha5a5;

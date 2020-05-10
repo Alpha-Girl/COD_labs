@@ -21,9 +21,9 @@
 
 
 module edg(
-         input clk, rst,
-         input y,
-         output p
+         input clk, rst,//clock,reset
+         input y,       //input signal
+         output p       //outout signal
        );
 localparam S0 = 2'd0;
 localparam S1 = 2'd1;
