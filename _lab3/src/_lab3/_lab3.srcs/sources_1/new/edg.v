@@ -1,0 +1,74 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2020/05/12 20:53:15
+// Design Name: 
+// Module Name: edg
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module edg(
+         input clk, rst,//clock,reset
+         input y,       //input signal
+         output p       //outout signal
+       );
+localparam S0 = 2'd0;
+localparam S1 = 2'd1;
+localparam S2 = 2'd2;
+reg [ 1: 0 ] state, next_state;
+//output logic
+assign p = ( state == S1 );
+
+//state logic
+always @( posedge rst, posedge clk )
+  if ( rst )
+    begin
+      state <= S0;
+    end
+  else
+    begin
+      state <= next_state;
+    end
+
+//next state logic
+always @ *
+  begin
+    next_state = state;
+    case ( state )
+      S0:
+        if ( y )
+          begin
+            next_state = S1;
+          end
+      S1:
+        if ( y )
+          begin
+            next_state = S2;
+          end
+        else
+          begin
+            next_state = S0;
+          end
+      S2:
+        if ( !y )
+          begin
+            next_state = S0;
+          end
+      default:
+        next_state = S0;
+    endcase
+  end
+endmodule
