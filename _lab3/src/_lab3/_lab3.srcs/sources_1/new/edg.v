@@ -1,28 +1,28 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ps 
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
+// Company:
+// Engineer:
+//
 // Create Date: 2020/05/12 20:53:15
-// Design Name: 
+// Design Name:
 // Module Name: edg
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
+// Project Name:
+// Target Devices:
+// Tool Versions:
+// Description:
+//
+// Dependencies:
+//
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
-// 
+//
 //////////////////////////////////////////////////////////////////////////////////
 
 
 module edg(
-         input clk, rst,//clock,reset
-         input y,       //input signal
+         input clk, rst, //clock,reset
+         input y,        //input signal
          output p       //outout signal
        );
 localparam S0 = 2'd0;

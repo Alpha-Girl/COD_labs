@@ -1,36 +1,36 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ps 
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
+// Company:
+// Engineer:
+//
 // Create Date: 2020/05/11 22:03:20
-// Design Name: 
+// Design Name:
 // Module Name: mux
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
+// Project Name:
+// Target Devices:
+// Tool Versions:
+// Description:
+//
+// Dependencies:
+//
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
-// 
+//
 //////////////////////////////////////////////////////////////////////////////////
 
-module mux2 #( parameter WIDTH = 32 )      //data width
-       ( output [ WIDTH - 1: 0 ] y,      //output data
-         input [ WIDTH - 1: 0 ] a, b,      //input data
+module mux2 #( parameter WIDTH = 32 )       //data width
+       ( output [ WIDTH - 1: 0 ] y,       //output data
+         input [ WIDTH - 1: 0 ] a, b,       //input data
          input s //select
        );
 assign y = s ? b : a;
 endmodule
 
 
-  module mux4 #( parameter WIDTH = 32 )      //data width
-  ( output [ WIDTH - 1: 0 ] y,      //output data
-    input [ WIDTH - 1: 0 ] a, b, c, d ,  //input data
+  module mux4 #( parameter WIDTH = 32 )       //data width
+  ( output [ WIDTH - 1: 0 ] y,       //output data
+    input [ WIDTH - 1: 0 ] a, b, c, d ,   //input data
     input [ 1: 0 ] sel //select
   );
 wire [ WIDTH - 1: 0 ] result0, result1;
