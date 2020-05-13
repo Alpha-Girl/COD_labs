@@ -1,0 +1,2 @@
+ins_a.v,verilog,xil_defaultlib,../../../../_lab3.srcs/sources_1/ip/ins_a/sim/ins_a.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

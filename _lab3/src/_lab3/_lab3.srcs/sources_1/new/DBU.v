@@ -42,7 +42,7 @@ reg clk_cpu;
 wire [ 31: 0 ] m_data, rf_data, pc_in, pc_out, instr, rf_rd1, rf_rd2, alu_y, m_rd;
 wire RegDst, jump, branch, MemtoReg, Memwe, ALUSrc, Regwe, zf;
 wire [ 2: 0 ] alu_op;
-cpu_test_new cpu1( clk_cpu, rst, clk_cpu, m_rf_addr, m_data, rf_data, pc_in, pc_out, instr, rf_rd1, rf_rd2, alu_y, m_rd, RegDst, jump, branch, MemtoReg, Memwe, ALUSrc, Regwe, zf, alu_op );
+cpu_test_new cpu1( clk_cpu, rst, m_rf_addr, m_data, rf_data, pc_in, pc_out, instr, rf_rd1, rf_rd2, alu_y, m_rd, RegDst, jump, branch, MemtoReg, Memwe, ALUSrc, Regwe, zf, alu_op );
 
 edg edg_st( clk, rst, step, edg_step );
 edg edg_incc( clk, rst, inc, edg_inc );
@@ -82,7 +82,7 @@ always @ *
       end
     else
       begin
-        clk_cpu = clk & edg_step;
+        clk_cpu = edg_step;
       end
   end
 always @ *
@@ -167,10 +167,11 @@ always @( posedge clk, posedge rst )
         case ( an )
           8'h80:
             next_an = 8'h01;
-        end
+        
         default:
           next_an = an << 1;
       endcase
+      end
   end
 num num1( nums, seg );
 assign nums = num_seg;

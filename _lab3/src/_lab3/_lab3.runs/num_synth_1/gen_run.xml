@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="num_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1589357636">
   <File Type="PA-TCL" Name="num.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="num_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="num_reports.tcl"/>
   <File Type="RDS-RDS" Name="num.vds"/>
   <File Type="RDS-UTIL" Name="num_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="num_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="num.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="num_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="num_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/num">
     <File Path="$PSRCDIR/sources_1/ip/num/num.xci">
       <FileInfo>
@@ -42,9 +39,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

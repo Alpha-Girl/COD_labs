@@ -22,7 +22,6 @@
 
 module cpu_test_new(
          input clk, rst, //clock,reset
-         input run,
          input [ 7: 0 ] m_rf_addr,
          output [ 31: 0 ] m_data, rf_data, pc_in, pc_out, instr, rf_rd1, rf_rd2, alu_y, m_rd,
          output reg RegDst, jump, branch, MemtoReg, Memwe, ALUSrc, Regwe,
