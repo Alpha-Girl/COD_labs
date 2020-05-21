@@ -39,7 +39,7 @@ wire [ 31: 0 ] instruct, rs, rd, rt, wd, ex_data, n_pc_b_b, aluout, alu_b, datao
 wire sel_pc_b, cf, of;
 
 reg [ 1: 0 ] ALUop;
-ins instruction( n_pc_j_m[ 9: 2 ], instruct );
+ins instruction( pc[ 9: 2 ], instruct );
 assign data_addr = run ? aluout[ 7 : 0 ] : m_rf_addr;
 data data1( data_addr, rt, aluout[ 7: 0 ], clk, Memwe, dataout );
 assign m_data = dataout;

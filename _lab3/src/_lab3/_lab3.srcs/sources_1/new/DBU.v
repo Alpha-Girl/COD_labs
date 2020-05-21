@@ -21,15 +21,15 @@
 
 
 module DBU(
-         input clk,
-         input succ,
-         input step,
-         input rst,
-         input [ 2: 0 ] sel,
-         input m_rf,
-         input inc,
-         input dec,
-         output reg [ 15: 0 ] led,
+         input clk,//clock
+         input succ,//successive
+         input step,//step
+         input rst,//reset
+         input [ 2: 0 ] sel,//select
+         input m_rf,//memory_regfile
+         input inc,//increase
+         input dec,//decrease
+         output reg [ 15: 0 ] led,//show part
          output reg [ 7: 0 ] an,
          output [ 7: 0 ] seg
        );

@@ -119,8 +119,7 @@ always @*
                     Memwe=0;
                     ALUSrc=0;
                     Regwe=0;
-                   end
-                                                                    
+                   end                                           
         endcase
     end
 //ALU Control Unit
