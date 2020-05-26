@@ -38,9 +38,9 @@ initial
 initial
   begin
     rst = 0;
-    #( PERIOD / 2 );
+    #( PERIOD / 2);
     rst = 1;
-    #( PERIOD / 2 );
+    #( PERIOD );
     rst = 0;
   end
 endmodule

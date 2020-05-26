@@ -18,7 +18,13 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-
+module mux2 #( parameter WIDTH = 32 )      //data width
+       ( output [ WIDTH - 1: 0 ] y,      //output data
+         input [ WIDTH - 1: 0 ] a, b,      //input data
+         input s //select
+       );
+assign y = s ? b : a;
+endmodule
 
   module mux4 #( parameter WIDTH = 32 )      //data width
   ( output [ WIDTH - 1: 0 ] y,      //output data

@@ -21,7 +21,7 @@
 
 
 module register#(parameter WIDTH=32)(input [WIDTH-1:0] in_data,
-input clk,rst,
+input clk,we,rst,
 output reg [WIDTH-1:0] out_data
 
     );
@@ -29,7 +29,7 @@ output reg [WIDTH-1:0] out_data
     begin
         if(rst)
             out_data<=32'b0;
-        else
+        else if(we)
             out_data<=in_data;
     end
 endmodule
