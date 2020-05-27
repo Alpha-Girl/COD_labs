@@ -2,8 +2,8 @@
 # Webtalk v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed May 27 20:36:46 2020
-# Process ID: 11464
+# Start of session at: Wed May 27 20:35:36 2020
+# Process ID: 17804
 # Current directory: C:/Users/Asus/Documents/GitHub/COD_labs/_lab4/src/_lab4/_lab4.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source C:/Users/Asus/Documents/GitHub/COD_labs/_lab4/src/_lab4/_lab4.sim/sim_1/behav/xsim/xsim.dir/CPU_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/Asus/Documents/GitHub/COD_labs/_lab4/src/_lab4/_lab4.sim/sim_1/behav/xsim/webtalk.log

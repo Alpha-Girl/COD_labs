@@ -55,6 +55,7 @@ assign pc_j = { pc[ 31: 28 ], pc_j_b[ 27: 0 ] } - 32'd44;
 mux4 #( 32 ) MUX1( alu_b, read1, 32'd4, extend, SF_extend, ALUSrcB );
 mux4 #( 32 ) MUX2( n_pc, alu_result, alu_out, pc_j, 32'b0, PCSource );
 reg [ 3: 0 ] status, next_status;
+//status logic
 always @( posedge clk, posedge rst )
   begin
     if ( rst )
@@ -66,6 +67,7 @@ always @( posedge clk, posedge rst )
         status <= next_status;
       end
   end
+//next_status logic
 always @( * )
   begin
 
@@ -132,6 +134,7 @@ always @( * )
       endcase
       end
   end
+//control logic
 always @( * )
   begin
     { PCWriteCond, PCWrite, IorD, MemRead, MemWrite, MemtoReg, IRWrite, PCSource, ALUOp, ALUSrcB, ALUSrcA, RegWrite, RegDst, r_ao, r_rf0, r_rf1, r_data } = 20'd0;
@@ -223,7 +226,7 @@ always @( * )
         endcase
       end
   end
-
+//ALU control logic
 always @ *
   begin
     case ( ALUOp )
