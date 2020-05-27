@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Sun May 17 09:33:10 2020
+-- Date        : Wed May 27 17:56:29 2020
 -- Host        : DESKTOP-LP1A2G2 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Users/Asus/Documents/GitHub/COD_labs/_lab4/src/_lab4/_lab4.srcs/sources_1/ip/mem/mem_sim_netlist.vhdl
+--               C:/Users/Asus/Documents/GitHub/COD_labs/_lab4/src/_lab4/_lab4.srcs/sources_1/ip/mem/mem_sim_netlist.vhdl
 -- Design      : mem
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -942,7 +942,7 @@ begin
     );
 ram_reg_0_255_0_0: unisim.vcomponents.RAM256X1S
     generic map(
-      INIT => X"0000000000000000000000000000000000000000000000000000000051863881"
+      INIT => X"0000000000000000000000000000000000000000000000000000000091863881"
     )
         port map (
       A(7 downto 0) => a(7 downto 0),
@@ -1039,7 +1039,7 @@ ram_reg_0_255_16_16: unisim.vcomponents.RAM256X1S
     );
 ram_reg_0_255_17_17: unisim.vcomponents.RAM256X1S
     generic map(
-      INIT => X"000000000000000000000000000000000000000000000000000000002E006000"
+      INIT => X"000000000000000000000000000000000000000000000000000000006E006000"
     )
         port map (
       A(7 downto 0) => a(7 downto 0),
@@ -1061,7 +1061,7 @@ ram_reg_0_255_18_18: unisim.vcomponents.RAM256X1S
     );
 ram_reg_0_255_19_19: unisim.vcomponents.RAM256X1S
     generic map(
-      INIT => X"000000000000000000000000000000000000000000000000000000002E38F800"
+      INIT => X"000000000000000000000000000000000000000000000000000000006E38F800"
     )
         port map (
       A(7 downto 0) => a(7 downto 0),
@@ -1072,7 +1072,7 @@ ram_reg_0_255_19_19: unisim.vcomponents.RAM256X1S
     );
 ram_reg_0_255_1_1: unisim.vcomponents.RAM256X1S
     generic map(
-      INIT => X"0000000000000000000000000000000000000000000000000000000015040803"
+      INIT => X"0000000000000000000000000000000000000000000000000000000055040803"
     )
         port map (
       A(7 downto 0) => a(7 downto 0),
@@ -1094,7 +1094,7 @@ ram_reg_0_255_20_20: unisim.vcomponents.RAM256X1S
     );
 ram_reg_0_255_21_21: unisim.vcomponents.RAM256X1S
     generic map(
-      INIT => X"0000000000000000000000000000000000000000000000000000000000A28000"
+      INIT => X"0000000000000000000000000000000000000000000000000000000040A28000"
     )
         port map (
       A(7 downto 0) => a(7 downto 0),
@@ -1127,7 +1127,7 @@ ram_reg_0_255_23_23: unisim.vcomponents.RAM256X1S
     );
 ram_reg_0_255_24_24: unisim.vcomponents.RAM256X1S
     generic map(
-      INIT => X"0000000000000000000000000000000000000000000000000000000000208000"
+      INIT => X"0000000000000000000000000000000000000000000000000000000040208000"
     )
         port map (
       A(7 downto 0) => a(7 downto 0),
@@ -1160,7 +1160,7 @@ ram_reg_0_255_26_26: unisim.vcomponents.RAM256X1S
     );
 ram_reg_0_255_27_27: unisim.vcomponents.RAM256X1S
     generic map(
-      INIT => X"00000000000000000000000000000000000000000000000000000000795D0001"
+      INIT => X"00000000000000000000000000000000000000000000000000000000B95D0001"
     )
         port map (
       A(7 downto 0) => a(7 downto 0),
@@ -1193,7 +1193,7 @@ ram_reg_0_255_29_29: unisim.vcomponents.RAM256X1S
     );
 ram_reg_0_255_2_2: unisim.vcomponents.RAM256X1S
     generic map(
-      INIT => X"0000000000000000000000000000000000000000000000000000000040111082"
+      INIT => X"0000000000000000000000000000000000000000000000000000000080111082"
     )
         port map (
       A(7 downto 0) => a(7 downto 0),
@@ -1226,7 +1226,7 @@ ram_reg_0_255_31_31: unisim.vcomponents.RAM256X1S
     );
 ram_reg_0_255_3_3: unisim.vcomponents.RAM256X1S
     generic map(
-      INIT => X"0000000000000000000000000000000000000000000000000000000079450009"
+      INIT => X"00000000000000000000000000000000000000000000000000000000B9450009"
     )
         port map (
       A(7 downto 0) => a(7 downto 0),
@@ -1237,7 +1237,7 @@ ram_reg_0_255_3_3: unisim.vcomponents.RAM256X1S
     );
 ram_reg_0_255_4_4: unisim.vcomponents.RAM256X1S
     generic map(
-      INIT => X"00000000000000000000000000000000000000000000000000000000515C0000"
+      INIT => X"00000000000000000000000000000000000000000000000000000000915C0000"
     )
         port map (
       A(7 downto 0) => a(7 downto 0),
@@ -1248,7 +1248,7 @@ ram_reg_0_255_4_4: unisim.vcomponents.RAM256X1S
     );
 ram_reg_0_255_5_5: unisim.vcomponents.RAM256X1S
     generic map(
-      INIT => X"0000000000000000000000000000000000000000000000000000000002208000"
+      INIT => X"0000000000000000000000000000000000000000000000000000000042208000"
     )
         port map (
       A(7 downto 0) => a(7 downto 0),

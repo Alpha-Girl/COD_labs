@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Sun May 17 09:33:10 2020
+// Date        : Wed May 27 17:56:29 2020
 // Host        : DESKTOP-LP1A2G2 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/Asus/Documents/GitHub/COD_labs/_lab4/src/_lab4/_lab4.srcs/sources_1/ip/mem/mem_sim_netlist.v
+//               C:/Users/Asus/Documents/GitHub/COD_labs/_lab4/src/_lab4/_lab4.srcs/sources_1/ip/mem/mem_sim_netlist.v
 // Design      : mem
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -687,7 +687,7 @@ module mem_spram
   (* ram_slice_begin = "0" *) 
   (* ram_slice_end = "0" *) 
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000051863881)) 
+    .INIT(256'h0000000000000000000000000000000000000000000000000000000091863881)) 
     ram_reg_0_255_0_0
        (.A(a[7:0]),
         .D(d[0]),
@@ -805,7 +805,7 @@ module mem_spram
   (* ram_slice_begin = "17" *) 
   (* ram_slice_end = "17" *) 
   RAM256X1S #(
-    .INIT(256'h000000000000000000000000000000000000000000000000000000002E006000)) 
+    .INIT(256'h000000000000000000000000000000000000000000000000000000006E006000)) 
     ram_reg_0_255_17_17
        (.A(a[7:0]),
         .D(d[17]),
@@ -833,7 +833,7 @@ module mem_spram
   (* ram_slice_begin = "19" *) 
   (* ram_slice_end = "19" *) 
   RAM256X1S #(
-    .INIT(256'h000000000000000000000000000000000000000000000000000000002E38F800)) 
+    .INIT(256'h000000000000000000000000000000000000000000000000000000006E38F800)) 
     ram_reg_0_255_19_19
        (.A(a[7:0]),
         .D(d[19]),
@@ -847,7 +847,7 @@ module mem_spram
   (* ram_slice_begin = "1" *) 
   (* ram_slice_end = "1" *) 
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000015040803)) 
+    .INIT(256'h0000000000000000000000000000000000000000000000000000000055040803)) 
     ram_reg_0_255_1_1
        (.A(a[7:0]),
         .D(d[1]),
@@ -875,7 +875,7 @@ module mem_spram
   (* ram_slice_begin = "21" *) 
   (* ram_slice_end = "21" *) 
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000000A28000)) 
+    .INIT(256'h0000000000000000000000000000000000000000000000000000000040A28000)) 
     ram_reg_0_255_21_21
        (.A(a[7:0]),
         .D(d[21]),
@@ -917,7 +917,7 @@ module mem_spram
   (* ram_slice_begin = "24" *) 
   (* ram_slice_end = "24" *) 
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000000208000)) 
+    .INIT(256'h0000000000000000000000000000000000000000000000000000000040208000)) 
     ram_reg_0_255_24_24
        (.A(a[7:0]),
         .D(d[24]),
@@ -959,7 +959,7 @@ module mem_spram
   (* ram_slice_begin = "27" *) 
   (* ram_slice_end = "27" *) 
   RAM256X1S #(
-    .INIT(256'h00000000000000000000000000000000000000000000000000000000795D0001)) 
+    .INIT(256'h00000000000000000000000000000000000000000000000000000000B95D0001)) 
     ram_reg_0_255_27_27
        (.A(a[7:0]),
         .D(d[27]),
@@ -1001,7 +1001,7 @@ module mem_spram
   (* ram_slice_begin = "2" *) 
   (* ram_slice_end = "2" *) 
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000040111082)) 
+    .INIT(256'h0000000000000000000000000000000000000000000000000000000080111082)) 
     ram_reg_0_255_2_2
        (.A(a[7:0]),
         .D(d[2]),
@@ -1043,7 +1043,7 @@ module mem_spram
   (* ram_slice_begin = "3" *) 
   (* ram_slice_end = "3" *) 
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000079450009)) 
+    .INIT(256'h00000000000000000000000000000000000000000000000000000000B9450009)) 
     ram_reg_0_255_3_3
        (.A(a[7:0]),
         .D(d[3]),
@@ -1057,7 +1057,7 @@ module mem_spram
   (* ram_slice_begin = "4" *) 
   (* ram_slice_end = "4" *) 
   RAM256X1S #(
-    .INIT(256'h00000000000000000000000000000000000000000000000000000000515C0000)) 
+    .INIT(256'h00000000000000000000000000000000000000000000000000000000915C0000)) 
     ram_reg_0_255_4_4
        (.A(a[7:0]),
         .D(d[4]),
@@ -1071,7 +1071,7 @@ module mem_spram
   (* ram_slice_begin = "5" *) 
   (* ram_slice_end = "5" *) 
   RAM256X1S #(
-    .INIT(256'h0000000000000000000000000000000000000000000000000000000002208000)) 
+    .INIT(256'h0000000000000000000000000000000000000000000000000000000042208000)) 
     ram_reg_0_255_5_5
        (.A(a[7:0]),
         .D(d[5]),
