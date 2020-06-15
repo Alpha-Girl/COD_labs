@@ -31,10 +31,11 @@ module REG_FILE//32 x WIDTH register file
          input we,  //write enable
          input [ WIDTH - 1: 0 ] wd //write data
        );
+wire [WIDTH-1:0] real_wd;
 reg [ WIDTH - 1: 0 ] mem[ 0: WIDTH - 1 ];
 initial
   $readmemh( "C:/Users/Asus/Documents/GitHub/COD_labs/_lab3/src/_lab3/_lab3.srcs/sources_1/new/rf.txt", mem );
-
+assign real_wd=(wa==5'd0)?32'd0:wd;
 assign rd0 = mem[ ra0 ];
 assign rd1 = mem[ ra1 ];
 
@@ -42,7 +43,7 @@ always @( posedge clk )
   begin
     if ( we )
       begin
-        mem[ wa ] <= wd;
+        mem[ wa ] <= real_wd;
       end
   end
 endmodule
