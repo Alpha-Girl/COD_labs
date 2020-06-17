@@ -33,7 +33,7 @@ begin
     if(rst)
         begin
             {out_npc,out_y,out_b}<=96'd0;
-            {out_MemWrite,out_MemRead,out_Branch,out_RegWrite,out_MemtoReg,out_wa}<=11'd0;
+            {out_MemWrite,out_MemRead,out_Branch,out_RegWrite,out_MemtoReg,out_wa,out_zf}<=12'd0;
         end
     else
         begin
