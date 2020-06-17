@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Jun 17 20:32:51 2020
+# Process ID: 18620
+# Current directory: C:/Users/Asus/Documents/GitHub/COD_labs/_lab5/src/_lab5/_lab5.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/Asus/Documents/GitHub/COD_labs/_lab5/src/_lab5/_lab5.sim/sim_1/behav/xsim/xsim.dir/test_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/Asus/Documents/GitHub/COD_labs/_lab5/src/_lab5/_lab5.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/Asus/Documents/GitHub/COD_labs/_lab5/src/_lab5/_lab5.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/Asus/Documents/GitHub/COD_labs/_lab5/src/_lab5/_lab5.sim/sim_1/behav/xsim/xsim.dir/test_behav/webtalk/xsim_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 109.426 ; gain = 17.789
+INFO: [Common 17-206] Exiting Webtalk at Wed Jun 17 20:32:59 2020...
