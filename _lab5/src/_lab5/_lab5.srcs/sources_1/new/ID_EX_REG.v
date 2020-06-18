@@ -35,6 +35,11 @@ begin
             {out_npc,out_a,out_b,out_imm,out_ir}<=160'd0;
             {out_ALUSrc,out_RegDst,out_MemWrite,out_MemRead,out_Branch,out_RegWrite,out_MemtoReg,out_ALUOp}<=9'd0;
         end
+    else if(bubble)
+        begin
+            {out_npc,out_a,out_b,out_imm,out_ir}<=160'd0;
+            {out_ALUSrc,out_RegDst,out_MemWrite,out_MemRead,out_Branch,out_RegWrite,out_MemtoReg,out_ALUOp}<=9'd0;
+        end
     else
         begin
             {out_npc,out_a,out_b,out_imm,out_ir}<={in_npc,in_a,in_b,in_imm,in_ir};

@@ -30,6 +30,11 @@ begin
             out_pc<=32'd0;
             out_ir<=32'd0;
         end
+    else if(bubble)
+        begin
+            out_pc<=32'd0;
+            out_ir<=32'd0;
+        end
     else
         begin
             out_pc<=in_pc;
