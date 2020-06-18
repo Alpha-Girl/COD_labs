@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Jun 18 19:36:22 2020
+# Process ID: 9888
+# Current directory: C:/Users/Asus/Documents/GitHub/COD_labs/_lab5/src/_lab5/_lab5.runs/DATA_MEM_1_synth_1
+# Command line: vivado.exe -log DATA_MEM_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DATA_MEM_1.tcl
+# Log file: C:/Users/Asus/Documents/GitHub/COD_labs/_lab5/src/_lab5/_lab5.runs/DATA_MEM_1_synth_1/DATA_MEM_1.vds
+# Journal file: C:/Users/Asus/Documents/GitHub/COD_labs/_lab5/src/_lab5/_lab5.runs/DATA_MEM_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+source DATA_MEM_1.tcl -notrace

@@ -39,11 +39,11 @@ assign real_wd=(wa==5'd0)?32'd0:wd;
 assign rd0 = mem[ ra0 ];
 assign rd1 = mem[ ra1 ];
 
-always @( posedge clk )
+always @*
   begin
     if ( we )
       begin
-        mem[ wa ] <= real_wd;
+        mem[ wa ] = real_wd;
       end
   end
 endmodule

@@ -5,10 +5,12 @@ verilog xil_defaultlib  \
 "../../../../_lab5.srcs/sources_1/new/ALU.v" \
 "../../../../_lab5.srcs/sources_1/new/CPU.v" \
 "../../../../_lab5.srcs/sources_1/new/EX_MEM_REG.v" \
+"../../../../_lab5.srcs/sources_1/new/FORWARD.v" \
 "../../../../_lab5.srcs/sources_1/new/ID_EX_REG.v" \
 "../../../../_lab5.srcs/sources_1/new/IF_ID_REG.v" \
 "../../../../_lab5.srcs/sources_1/new/MEM_WB_REG.v" \
 "../../../../_lab5.srcs/sources_1/new/REG_FILE.v" \
+"../../../../_lab5.srcs/sources_1/new/mux.v" \
 "../../../../_lab5.srcs/sources_1/new/register.v" \
 "../../../../_lab5.srcs/sim_1/new/test.v" \
 
