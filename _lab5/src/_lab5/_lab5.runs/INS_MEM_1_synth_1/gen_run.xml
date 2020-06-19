@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="INS_MEM_1_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1592478695">
   <File Type="PA-TCL" Name="INS_MEM_1.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="INS_MEM_1_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="INS_MEM_1_reports.tcl"/>
   <File Type="RDS-RDS" Name="INS_MEM_1.vds"/>
   <File Type="RDS-UTIL" Name="INS_MEM_1_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="INS_MEM_1_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="INS_MEM_1.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="INS_MEM_1_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="INS_MEM_1_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/INS_MEM_1">
     <File Path="$PSRCDIR/sources_1/ip/INS_MEM_1/INS_MEM_1.xci">
       <FileInfo>
@@ -42,9 +39,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
